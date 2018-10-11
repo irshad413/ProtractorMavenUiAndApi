@@ -94,7 +94,7 @@
                     <configuration>
                     	<workingDirectory>node</workingDirectory>
                     	<executable>webdriver-manager.cmd</executable>
-                    	<commandlineArgs>./node_modules/protractor/bin/webdriver-manager update</commandlineArgs>
+                    	<commandlineArgs>update</commandlineArgs>
                     </configuration>
             	</execution>
             	<execution>
