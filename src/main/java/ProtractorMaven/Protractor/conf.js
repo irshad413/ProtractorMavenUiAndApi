@@ -17,6 +17,8 @@ exports.config = {
   },
   
   onPrepare: function () {
+	  browser.manage().window().maximize();
+      browser.manage().timeouts().implicitlyWait(5000);
 	  return global.browser.getProcessedConfig().then(function (config) {
       });
   },

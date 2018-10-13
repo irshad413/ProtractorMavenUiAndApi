@@ -4,11 +4,19 @@ describe('Protractor Demo App', function() {
   var secondNumber = element(by.model('second'));
   var clickButton = element(by.id('gobutton'));
   var result = element(by.binding('latest'));
+  var rest = require('./../../../../../node/node_modules/restler');
   beforeEach(function() {
     browser.get('http://juliemr.github.io/protractor-demo/');
   });
   
   it('should have a title', function() {
+	rest.post("http://restapi.demoqa.com/customer/register",{
+	data: {"LastName":"Pentapati","UserName":"James007","Email":"AbramPentapati@gmail.com","FirstName":"Abram123","Password":"123456"}})
+	.on('complete', function(data, response) {
+  if (response.statusCode == 200) {
+	  
+  }
+  });
     expect(browser.getTitle()).toEqual('Super Calculator');
   });
   

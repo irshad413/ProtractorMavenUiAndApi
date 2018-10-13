@@ -86,6 +86,18 @@
                     </configuration>
             	</execution>
             	<execution>
+            		<id>Install Restler</id>
+            		<phase>pre-integration-test</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                    	<workingDirectory>node</workingDirectory>
+                    	<executable>npm.cmd</executable>
+                    	<commandlineArgs>install -g restler</commandlineArgs>
+                    </configuration>
+            	</execution>
+            	<execution>
             		<id>Update Webdriver-Manager</id>
             		<phase>pre-integration-test</phase>
                     <goals>
